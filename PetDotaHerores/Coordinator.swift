@@ -21,7 +21,6 @@ final class Coordinator {
     }
 
     func start() {
-
         let viewModel = HomeViewModel(route: openDetails)
         let view = HomeViewController(viewModel: viewModel)
         navigationController.setViewControllers([view], animated: true)
@@ -29,7 +28,7 @@ final class Coordinator {
 }
 
 private extension Coordinator {
-    func openDetails(hero: Hero){
+    func openDetails(hero: Hero) {
         let vc = HeroViewController(viewModel: HeroViewModel(hero: hero))
         navigationController.pushViewController(vc, animated: true)
     }

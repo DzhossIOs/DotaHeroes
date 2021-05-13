@@ -28,5 +28,3 @@ struct HeroDto: Decodable {
 
     // to use CodingKeys
 }
-
-
