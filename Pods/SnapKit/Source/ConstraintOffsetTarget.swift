@@ -27,20 +27,28 @@
     import AppKit
 #endif
 
-public protocol ConstraintOffsetTarget: ConstraintConstantTarget {}
 
-extension Int: ConstraintOffsetTarget {}
+public protocol ConstraintOffsetTarget: ConstraintConstantTarget {
+}
 
-extension UInt: ConstraintOffsetTarget {}
+extension Int: ConstraintOffsetTarget {
+}
 
-extension Float: ConstraintOffsetTarget {}
+extension UInt: ConstraintOffsetTarget {
+}
 
-extension Double: ConstraintOffsetTarget {}
+extension Float: ConstraintOffsetTarget {
+}
 
-extension CGFloat: ConstraintOffsetTarget {}
+extension Double: ConstraintOffsetTarget {
+}
+
+extension CGFloat: ConstraintOffsetTarget {
+}
 
 extension ConstraintOffsetTarget {
-    var constraintOffsetTargetValue: CGFloat {
+    
+    internal var constraintOffsetTargetValue: CGFloat {
         let offset: CGFloat
         if let amount = self as? Float {
             offset = CGFloat(amount)
@@ -57,4 +65,5 @@ extension ConstraintOffsetTarget {
         }
         return offset
     }
+    
 }

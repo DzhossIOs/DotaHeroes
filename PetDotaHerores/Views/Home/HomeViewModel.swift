@@ -13,24 +13,24 @@ final class HomeViewModel {
     private let repo: HeroRepositoryP // to be injected
 
     private let route: (Hero) -> Void
-
-    init(repo: HeroRepositoryP, route: @escaping (Hero) -> Void) {
+    
+    init(repo: HeroRepositoryP, route: @escaping (Hero) -> Void ) {
         self.repo = repo
         self.route = route
     }
-
-    convenience init(route: @escaping (Hero) -> Void) {
+   
+    convenience init(route: @escaping (Hero) -> Void ){
         self.init(repo: HeroRepository(), route: route)
     }
-
+    
     func viewDidLoad() {
         repo.fetchHeroStats { [weak self] heroes in
             self?.heroes = heroes
-            self?.cellModels.value = heroes.map { .init(text: $0.localized_name.capitalized) }
+            self?.cellModels.value = heroes.map { .init(text: $0.localized_name.capitalized, icon: $0.icon) }
+           
         }
     }
-
-    func didSelectAtRow(index: Int) {
+    func didSelectAtRow(index: Int){
         route(heroes[index])
     }
 }

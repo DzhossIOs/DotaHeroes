@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A54FF5D264EA0D7008D3376 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54FF5C264EA0D7008D3376 /* HomeTableViewCell.swift */; };
 		1ADE6612264BBBDC001D460F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE6611264BBBDC001D460F /* AppDelegate.swift */; };
 		1ADE6616264BBBDC001D460F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE6615264BBBDC001D460F /* HomeViewController.swift */; };
 		1ADE6619264BBBDC001D460F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADE6617264BBBDC001D460F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A54FF5C264EA0D7008D3376 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1ADE660E264BBBDC001D460F /* PetDotaHerores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetDotaHerores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADE6611264BBBDC001D460F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADE6615264BBBDC001D460F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				1ADE6639264BBF06001D460F /* HomeViewModel.swift */,
 				1ADE6615264BBBDC001D460F /* HomeViewController.swift */,
+				1A54FF5C264EA0D7008D3376 /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				1ADE663A264BBF06001D460F /* HomeViewModel.swift in Sources */,
 				1ADE6616264BBBDC001D460F /* HomeViewController.swift in Sources */,
 				1ADE6612264BBBDC001D460F /* AppDelegate.swift in Sources */,
+				1A54FF5D264EA0D7008D3376 /* HomeTableViewCell.swift in Sources */,
 				1ADE6642264BBF74001D460F /* DotaLabel.swift in Sources */,
 				1ADE664D264BC001001D460F /* HeroRepository.swift in Sources */,
 				1ADE6630264BBE7C001D460F /* Hero.swift in Sources */,

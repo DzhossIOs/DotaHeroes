@@ -11,6 +11,7 @@ struct Hero: Decodable {
     let attack_type: String
     let img: String
     let base_armor: Float
+    let icon: String
 
     // to use CodingKeys
 }
@@ -21,10 +22,11 @@ struct HeroDto: Decodable {
     let attack_type: String
     let img: String
     let base_armor: Float
+    let icon: String
 
     func toDomain() -> Hero {
-        .init(localized_name: localized_name, primary_attr: primary_attr, attack_type: attack_type, img: img, base_armor: base_armor)
+        .init(localized_name: localized_name, primary_attr: primary_attr, attack_type: attack_type, img: img, base_armor: base_armor, icon: icon)
     }
-
-    // to use CodingKeys
 }
+
+

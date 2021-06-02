@@ -15,14 +15,12 @@ final class HeroRepository: HeroRepositoryP {
     init(api: HeroApiServiceP) {
         self.api = api
     }
-
-    convenience init() {
+    convenience init(){
         self.init(api: HeroApiService())
     }
-
     func fetchHeroStats(completion: @escaping ([Hero]) -> Void) {
         api.fetchHeroStats { dtos in
-            completion(dtos.map { $0.toDomain() })
+            completion( dtos.map { $0.toDomain() } )
         }
     }
 }

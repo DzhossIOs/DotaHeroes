@@ -14,14 +14,14 @@ final class HeroApiService: HeroApiServiceP {
     func fetchHeroStats(completion: @escaping ([HeroDto]) -> Void) {
         let url = URL(string: "https://api.opendota.com/api/heroStats") // url path, method, etc
         // network layer - builds requests
-
-        URLSession.shared.dataTask(with: url!) { data, _, error in
+        
+        URLSession.shared.dataTask(with: url!) { (data, _, error) in
             DispatchQueue.main.async {
                 if error == nil {
                     do {
                         let models = try JSONDecoder().decode([HeroDto].self, from: data!) // data proper unwrap
                         completion(models)
-                    } catch {
+                    } catch{
                         completion([])
                     }
                 } else {
@@ -31,3 +31,5 @@ final class HeroApiService: HeroApiServiceP {
         }.resume()
     }
 }
+
+
